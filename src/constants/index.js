@@ -175,7 +175,7 @@ const expCards = [
   },
   {
     review:
-      "Hashhir's work on Dara's web app brought a high level of quality and efficiency. He delivered solutions that enhanced our web app experience & meet our product goals.",
+      "Hashir's work on Dara's web app brought a high level of quality and efficiency. He delivered solutions that enhanced our web app experience & meet our product goals.",
     imgPath: "/public/images/exp3.png",
     logoPath: "/public/images/logo3.png",
     title: "Backend Developer",
