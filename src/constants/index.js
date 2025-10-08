@@ -251,12 +251,12 @@ const testimonials = [
 const socialImgs = [
   {
     name: "insta",
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/mhashirabdullah/",
     imgPath: "/public/images/insta.png",
   },
   {
     name: "fb",
-    url: "https://www.facebook.com/",
+    url: "https://github.com/MHashirAbdullah",
     imgPath: "/public/images/fb.png",
   },
   {
@@ -266,7 +266,7 @@ const socialImgs = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/in/muhammad-hashir-abdullah-2b7271240",
     imgPath: "/public/images/linkedin.png",
   },
 ];
