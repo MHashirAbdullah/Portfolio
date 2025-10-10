@@ -23,12 +23,13 @@ const Contact = () => {
     setLoading(true); // Show loading state
 
     try {
-      await emailjs.sendForm(
-        import.meta.env.APP_EMAILJS_SERVICE_ID,
-        import.meta.env.APP_EMAILJS_TEMPLATE_ID,
+      const reponse = await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
+      console.log("EmailJs response", reponse);
       toast.success("Message sent successfully!");
       // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
@@ -56,7 +57,9 @@ const Contact = () => {
                 className="w-full flex flex-col gap-6 text-white"
               >
                 <div>
-                  <label htmlFor="name" className="text-sm font-medium">Your name</label>
+                  <label htmlFor="name" className="">
+                    Your Name
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -65,6 +68,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What’s your good name?"
                     required
+                    className="input-style"
                   />
                 </div>
 
@@ -83,7 +87,9 @@ const Contact = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-sm font-medium">Your Message</label>
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Your Message
+                  </label>
                   <textarea
                     id="message"
                     name="message"

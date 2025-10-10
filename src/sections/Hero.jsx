@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I'm Hashir Abdullah, a Software Engineer Based in Pakistan{" "}
+              Hi, I'm <span className='font-bold text-[#3b82f6]'>Hashir Abdullah</span>, a Software Engineer Based in Pakistan{" "}
               <br />
               with a Passion for Turning Ideas into Reality.
             </p>
