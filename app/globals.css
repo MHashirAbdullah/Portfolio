@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #3d7eff;
+  --color-background-light: #f5f6f8;
+  --color-background-dark: #0f1623;
+  --color-background: var(--color-background-dark);
+  --color-foreground: #f1f5f9;
+  --font-display: "Inter", sans-serif;
+}
+
+:root {
+  --bg-dark: #0f1623;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background-dark);
+  color: var(--color-foreground);
+  font-family: var(--font-display);
+  overflow-x: hidden;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d7eff;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a93ff;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3d7eff #0a0f1a;
+}
+
+/* ── Glassmorphism Navigation ── */
+.glass-nav {
+  background: rgba(10, 15, 26, 0.6);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Glass Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Ocean Glow */
+.ocean-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(61, 126, 255, 0.12) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ocean-glow-box {
+  box-shadow: 0 0 40px -10px rgba(61, 126, 255, 0.3);
+}
+
+::selection {
+  background: rgba(61, 126, 255, 0.3);
+}
+
+/* GPU-accelerated animation helpers */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
