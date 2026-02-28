@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -114,26 +114,26 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden border-t border-slate-800/50 glass-nav"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden border-t border-slate-800/50 bg-[#0a0f1a]/95 backdrop-blur-2xl overflow-hidden"
           >
             <nav className="flex flex-col gap-1 px-6 py-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.href}
-                  href={link.href}
+                  type="button"
                   onClick={(e) => scrollTo(e, link.href)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors text-left w-full ${
                     activeSection === link.href.replace("#", "")
                       ? "text-primary bg-primary/10"
                       : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                   }`}
                 >
                   {link.label}
-                </a>
+                </button>
               ))}
             </nav>
           </motion.div>
