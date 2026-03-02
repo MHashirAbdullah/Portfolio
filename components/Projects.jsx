@@ -66,7 +66,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary font-bold group/link w-fit"
+                  className="cursor-target inline-flex items-center gap-2 text-primary font-bold group/link w-fit"
                 >
                   View Project
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-1" />

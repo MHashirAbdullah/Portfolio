@@ -27,7 +27,7 @@ export default function CTABanner() {
             .getElementById("contact")
             ?.scrollIntoView({ behavior: "smooth" });
         }}
-        className="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-colors duration-200 relative z-10 shadow-xl"
+        className="cursor-target group relative inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-slate-900 transition-all hover:scale-105 hover:bg-slate-100 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
       >
         Get Started
       </a>

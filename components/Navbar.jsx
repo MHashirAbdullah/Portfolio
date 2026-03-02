@@ -61,7 +61,7 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => scrollTo(e, "#home")}
-            className="flex items-center gap-2.5"
+            className="flex items-center gap-2.5 cursor-target"
           >
             <span className="text-xl font-black tracking-tighter uppercase">
               MHA<span className="text-primary">.</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollTo(e, link.href)}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                className={`cursor-target text-sm font-medium transition-colors duration-200 hover:text-primary ${
                   activeSection === link.href.replace("#", "")
                     ? "text-primary"
                     : "text-slate-400"
@@ -91,13 +91,13 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => scrollTo(e, "#contact")}
-              className="hidden sm:flex h-10 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 transition-all"
+              className="cursor-target hidden sm:flex h-10 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 transition-all"
             >
               Let&apos;s Talk
             </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 hover:text-white transition-colors"
+              className="cursor-target md:hidden flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 hover:text-white transition-colors"
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
@@ -126,7 +126,7 @@ export default function Navbar() {
                   key={link.href}
                   type="button"
                   onClick={(e) => scrollTo(e, link.href)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors text-left w-full ${
+                  className={`cursor-target px-4 py-3 rounded-lg text-sm font-medium transition-colors text-left w-full ${
                     activeSection === link.href.replace("#", "")
                       ? "text-primary bg-primary/10"
                       : "text-slate-300 hover:text-white hover:bg-slate-800/50"

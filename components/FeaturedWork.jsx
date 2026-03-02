@@ -19,9 +19,7 @@ export default function FeaturedWork() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h2 className="text-3xl font-bold tracking-tight">
-            Featured Work
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight">Featured Work</h2>
           <p className="mt-2 text-slate-500">
             Selected digital artifacts from my workshop.
           </p>
@@ -36,7 +34,7 @@ export default function FeaturedWork() {
               .getElementById("work")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="mt-6 hidden items-center gap-2 text-sm font-bold text-primary hover:underline md:flex md:mt-0"
+          className="cursor-target mt-6 hidden items-center gap-2 text-sm font-bold text-primary hover:underline md:flex md:mt-0"
         >
           Explore All <ArrowUpRight className="h-4 w-4" />
         </a>
@@ -69,9 +67,7 @@ export default function FeaturedWork() {
                 <h3 className="text-xl font-bold text-white">
                   {project.title}
                 </h3>
-                <p className="text-sm text-slate-300">
-                  {project.description}
-                </p>
+                <p className="text-sm text-slate-300">{project.description}</p>
               </div>
             </div>
           </motion.div>
@@ -88,7 +84,7 @@ export default function FeaturedWork() {
               .getElementById("work")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+          className="cursor-target flex items-center gap-2 text-sm font-bold text-primary hover:underline"
         >
           Explore All <ArrowUpRight className="h-4 w-4" />
         </a>

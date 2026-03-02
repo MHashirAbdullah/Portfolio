@@ -97,3 +97,9 @@ body {
 .will-change-opacity {
   will-change: opacity;
 }
+
+/* Force hide native cursors when custom cursor is active */
+body.hide-cursor,
+body.hide-cursor * {
+  cursor: none !important;
+}

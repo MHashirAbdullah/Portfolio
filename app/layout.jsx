@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TargetCursor from "@/components/TargetCursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} font-display bg-[#0f1623] text-slate-100 antialiased`}
       >
+        <TargetCursor />
         <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
           <Navbar />
           <main className="flex-1">{children}</main>

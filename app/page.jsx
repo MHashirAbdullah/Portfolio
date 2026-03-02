@@ -6,10 +6,12 @@ import Projects from "@/components/Projects";
 import CTABanner from "@/components/CTABanner";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/Contact";
+import Preloader from "@/components/Preloader";
 
 export default function HomePage() {
   return (
     <>
+      <Preloader />
       {/* Hero Section */}
       <Hero />
 

@@ -100,13 +100,7 @@ export default function Hero() {
         >
           <a
             href="#work"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("work")
-                ?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }}
-            className="group relative flex h-14 w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-primary px-8 font-bold text-white transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(61,126,255,0.5)] sm:w-auto"
+            className="cursor-target group relative flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-bold text-white transition-all hover:scale-105 hover:bg-primary/90 hover:shadow-[0_0_40px_-10px_rgba(61,126,255,0.5)]"
           >
             View My Work
             <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -119,7 +113,7 @@ export default function Hero() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            className="flex h-14 w-full items-center justify-center gap-2 rounded-xl border border-slate-700/50 bg-slate-800/50 px-8 font-bold transition-all duration-300 hover:bg-slate-800 sm:w-auto backdrop-blur-sm"
+            className="cursor-target flex h-14 w-full items-center justify-center gap-2 rounded-xl border border-slate-700/50 bg-slate-800/50 px-8 font-bold transition-all duration-300 hover:bg-slate-800 sm:w-auto backdrop-blur-sm"
           >
             Let&apos;s Talk
             <MessageCircle className="h-5 w-5" />

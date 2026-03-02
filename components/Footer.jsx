@@ -29,7 +29,7 @@ export default function Footer() {
               <a
                 key={social.label}
                 href={social.href}
-                className="text-slate-400 hover:text-primary transition-colors duration-200"
+                className="cursor-target h-10 w-10 flex items-center justify-center rounded-full bg-slate-800/50 text-slate-400 hover:bg-primary/20 hover:text-primary transition-all duration-300"
                 aria-label={social.label}
                 target="_blank"
                 rel="noopener noreferrer"
